@@ -1,0 +1,34 @@
+configure({
+  browser: 'C:\utils\firefox\firefox.exe',
+
+  extra_aliases: ['abeehler.aliases'],
+
+  iis_express: {
+    present: true,
+    enable_in_project_files: true,
+  },
+
+  web: {
+    start_url: "http://localhost:8080/views/Default.aspx",
+  },
+
+  vm: {
+    memory: 1024,
+    cpus: 1
+  },
+
+  git: {
+    user: 'abeehler'
+  },
+
+  net_tools_paths: [
+    '/c/Program\ Files\ (x86)',
+    '/c/Program\ Files\ (x86)/MSBuild/14.0/bin',
+    '/c/utils/vs/2015/Common7/IDE',
+    '/c/utils/vs/2015/Common7/Tools',
+    '/c/utils/vs/2015/VC/BIN',
+    '/c/Windows/Microsoft.NET/Framework/v4.0.30319',
+    '/c/Program Files (x86)/Microsoft SDKs/Windows/v8.1A/bin/NETFX 4.5.1/Tools/x64/',
+    '/c/Program Files (x86)/Microsoft SDKs/Windows/v8.1A/bin/NETFX 4.5.1 Tools'
+  ],
+})
